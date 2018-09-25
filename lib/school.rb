@@ -3,19 +3,17 @@ class School
 
   def initialize(name)
     @name = name
-    roster
+    @roster = {}
   end
 
   def roster
-    @roster = {}
+    @roster
   end
 
   def add_student(student, grade)
     if @roster.include?(grade) == true
-      puts "top"
       @roster[grade] << student
     else
-      puts "bottom"
       @roster[grade] = []
       @roster[grade] << student
     end
