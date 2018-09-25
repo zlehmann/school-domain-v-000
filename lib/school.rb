@@ -12,8 +12,10 @@ class School
 
   def add_student(student, grade)
     if @roster.include?(grade) == true
+      puts "top"
       @roster[grade] << student
     else
+      puts "bottom"
       @roster[grade] = []
       @roster[grade] << student
     end
